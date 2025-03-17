@@ -20,9 +20,7 @@ export const TaskProvider = ({ children }) => {
   }, []);
 
   useEffect(() => {
-    if (tasks.length > 0) {
       localStorage.setItem("tasks", JSON.stringify(tasks));
-    }
   }, [tasks]);
 
   const addTask = (task) => {
