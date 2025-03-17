@@ -1,12 +1,86 @@
-# React + Vite
+# Sware Task Manager
 
-This template provides a minimal setup to get React working in Vite with HMR and some ESLint rules.
+## 🚀 Overview
 
-Currently, two official plugins are available:
+The **Sware Task Manager** is a simple and efficient web application to manage your daily tasks. It allows you to add, mark as completed, and delete tasks. Additionally, data is stored in localStorage, keeping your tasks saved even after refreshing the page.
 
-- [@vitejs/plugin-react](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react/README.md) uses [Babel](https://babeljs.io/) for Fast Refresh
-- [@vitejs/plugin-react-swc](https://github.com/vitejs/vite-plugin-react-swc) uses [SWC](https://swc.rs/) for Fast Refresh
+🔗 **Live demo:** [sware-todo-app.vercel.app](https://sware-todo-app.vercel.app/)
 
-## Expanding the ESLint configuration
+## 🛠️ Technologies Used
 
-If you are developing a production application, we recommend using TypeScript and enable type-aware lint rules. Check out the [TS template](https://github.com/vitejs/vite/tree/main/packages/create-vite/template-react-ts) to integrate TypeScript and [`typescript-eslint`](https://typescript-eslint.io) in your project.
+- **React 19** — Library for building the interface
+- **TailwindCSS** — Modern and responsive styling
+- **Axios** — For API consumption
+- **Vite** — Fast development environment
+
+## 🎯 Features
+
+- 📌 **Add Tasks** — Easily create new tasks
+- ✅ **Mark as Completed** — Track your progress
+- 🗑️ **Delete Tasks** — Remove unwanted tasks
+- 💾 **Local Storage** — Tasks remain saved
+- 🔄 **API Consumption** — Initial task loading from an external API
+
+## 📁 Project Structure
+
+```
+📂 sware-todo-app
+│
+├── 📁 src
+│   ├── 📄 App.jsx
+│   ├── 📄 index.css
+│   ├── 📄 main.jsx
+│   ├── 📁 assets
+│   │   ├── 📁 img
+│   │   │   ├── 📄 delete-icon.svg
+│   │   │   ├── 📄 plus-icon.svg
+│   │   │   └── 📄 sware-logo.png
+│   ├── 📁 components
+│   │   ├── 📁 AddTaskForm
+│   │   │   └── 📄 index.jsx
+│   │   ├── 📁 TaskItem
+│   │   │   └── 📄 index.jsx
+│   │   ├── 📁 TaskList
+│   │   │   └── 📄 index.jsx
+│   │   └── 📁 TaskManager
+│   │       └── 📄 index.jsx
+│   └── 📁 contexts
+│       └── 📄 TaskContext.js
+```
+
+## 🔧 Installation and Setup
+
+1. **Clone the repository:**
+
+   ```bash
+   git clone https://github.com/yourusername/sware-todo-app.git
+   ```
+
+2. **Navigate to the project folder:**
+
+   ```bash
+   cd sware-todo-app
+   ```
+
+3. **Install dependencies:**
+
+   ```bash
+   npm install
+   ```
+
+4. **Run the development server:**
+
+   ```bash
+   npm run dev
+   ```
+
+5. **Open in the browser:**
+
+   ```
+   http://localhost:5173
+   ```
+   
+---
+
+Made with ❤️ by [**Luiz Lopes**](https://github.com/luizlopes12)
+
