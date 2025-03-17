@@ -6,6 +6,8 @@ The **Sware Task Manager** is a simple and efficient web application to manage y
 
 🔗 **Live demo:** [sware-todo-app.vercel.app](https://sware-todo-app.vercel.app/)
 
+🔗 **Live demo video:** ![App record](public/record.gif)
+
 ## 🛠️ Technologies Used
 
 - **React 19** — Library for building the interface
