@@ -1,11 +1,11 @@
 
 import TaskItem from '../TaskItem';
 
-const TaskList = ({ tasks, onToggle, onDelete }) => {
+const TaskList = ({ tasks, handleToggleTask, handleDeleteTask }) => {
   return (
-    <div>
+    <div className='flex flex-col gap-1'>
       {tasks.length ? tasks.map(task => (
-        <TaskItem key={task.id} task={task} onToggle={onToggle} onDelete={onDelete} />
+        <TaskItem key={task.id} task={task} handleToggleTask={handleToggleTask} handleDeleteTask={handleDeleteTask} />
       )) : <p className="text-center">No tasks available</p>}
     </div>
   );

@@ -1,17 +1,22 @@
-const TaskItem = ({ task, onToggle, onDelete }) => {
+import deleteIcon from '../../assets/img/delete-icon.svg'
+
+
+const TaskItem = ({ task, handleToggleTask, handleDeleteTask }) => {
   return (
-    <div className="flex justify-between items-center p-2 border-b">
+    <div className="bg-gray-50 flex justify-between py-2 px-4 rounded-md">
       <span
         className={
           `cursor-pointer ${task.completed ? 'line-through text-gray-500' : ''}`
         }
-        onClick={() => onToggle(task.id)}
+        onClick={() => handleToggleTask(task.id)}
       >
         {task.title}
       </span>
-      <button onClick={() => onDelete(task.id)} className="text-red-500">
-        Delete
+      <div className='flex gap-2'>
+      <button onClick={() => handleDeleteTask(task.id)} className="cursor-pointer">
+        <img src={deleteIcon} alt="Delete icon"/>
       </button>
+      </div>
     </div>
   );
 };

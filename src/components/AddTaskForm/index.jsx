@@ -1,13 +1,14 @@
 import { useState } from 'react';
-import './style.scss'
 
-const AddTaskForm = ({ onAdd }) => {
+import plusIcon from '../../assets/img/plus-icon.svg'
+
+const AddTaskForm = ({ handleCreateTask }) => {
   const [task, setTask] = useState('');
 
   const handleSubmit = (e) => {
     e.preventDefault();
     if (!task.trim()) return;
-    onAdd({ id: Date.now(), title: task, completed: false });
+    handleCreateTask({ id: Date.now(), title: task, completed: false });
     setTask('');
   };
 
@@ -17,10 +18,12 @@ const AddTaskForm = ({ onAdd }) => {
         type="text"
         value={task}
         onChange={(e) => setTask(e.target.value)}
-        className="border p-2 w-full"
-        placeholder="Add new task..."
+        className="border border-[#030F27] rounded-md p-2 flex-1"
+        placeholder="Drink Water..."
       />
-      <button className="bg-blue-500 text-white px-4 py-2">Add</button>
+      <button className="bg-[#030F27] hover:bg-[#1a2232] transition-all ease-in-out text-white px-4 py-2 rounded-md flex gap-2 cursor-pointer">
+        Create <img className='w-4' src={plusIcon} alt="Plus icon" />
+      </button>
     </form>
   );
 };
